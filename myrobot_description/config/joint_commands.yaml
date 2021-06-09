@@ -1,0 +1,11 @@
+joint1_effort_controller:
+  type: "effort_controllers/JointEffortController"
+  joint: myrobot_joint1
+
+joint2_effort_controller:
+  type: "effort_controllers/JointEffortController"
+  joint: myrobot_joint2
+
+joint3_effort_controller:
+  type: "effort_controllers/JointEffortController"
+  joint: myrobot_joint3

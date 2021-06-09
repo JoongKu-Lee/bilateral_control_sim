@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/joongku/ros/panda_simulation_ws/devel/include/**",
+        "/home/joongku/ros/virtual_fixture_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/joongku/ros/panda_simulation_ws/src/panda_simulation/learning_from_demonstration/include/**",
+        "/home/joongku/ros/panda_simulation_ws/src/panda_simulation/omega6_driver/include/**",
+        "/home/joongku/ros/panda_simulation_ws/src/panda_simulation/simulation_gui/include/**",
+        "/home/joongku/ros/virtual_fixture_ws/src/i-vfg-gui/virtual-fixture-gui/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
