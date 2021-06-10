@@ -14,7 +14,7 @@
 
 	<!-- Control Parameter loading -->
 	<rosparam command="load" file="$(find myrobot_description)/config/joint_states.yaml" ns="$(arg robot_namespace)"/>
-	<rosparam command="load" file="$(find myrobot_description)/config/joint_commands.yaml" ns="$(arg robot_namespace)"/>
+	<rosparam command="load" file="$(find myrobot_description)/config/myrobot_joint_commands.yaml" ns="$(arg robot_namespace)"/>
 
 
 	<node name="myrobot_controller_spawner" pkg="controller_manager" type="spawner" ns="$(arg robot_namespace)" args=

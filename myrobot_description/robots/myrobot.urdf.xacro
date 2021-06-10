@@ -7,5 +7,5 @@
   	<xacro:arg name="gazebo" value="${gazebo}"/>
   </xacro:include>
 
-  <xacro:myrobot connected_to='world'/>
+  <xacro:myrobot connected_to='world' arm_id='myrobot'/>
 </robot>
