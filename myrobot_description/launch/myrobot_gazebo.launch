@@ -3,4 +3,5 @@
 		<arg name="paused" value="true"/>
 	</include>
 	<include file="$(find myrobot_description)/launch/myrobot.launch"/>
+	<include file="$(find myrobot_description)/launch/myrobot2.launch"/>
 </launch>

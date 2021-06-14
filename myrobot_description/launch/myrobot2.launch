@@ -4,10 +4,10 @@
 	<arg name="robot_namespace" default="myrobot2"/>
 	<arg name="hardware_interface" default="EffortJointInterface"/>
 
-	<param name="$(arg robot_namespace)/robot_description" command="$(find xacro)/xacro '$(find myrobot_description)/robots/myrobot.urdf.xacro' robot_name:=$(arg robot_name) hardware_interface:=$(arg hardware_interface)"/>
+	<param name="$(arg robot_namespace)/robot_description" command="$(find xacro)/xacro '$(find myrobot_description)/robots/myrobot2.urdf.xacro' robot_name:=$(arg robot_name) hardware_interface:=$(arg hardware_interface) gazebo:='false'"/>
 
 	<!-- Spawning the robot -->
-	<node name="spawn2" pkg="gazebo_ros" type="spawn_model" args="-param /robot_description -urdf -model $(arg robot_name) -x 1
+	<node name="spawn2" pkg="gazebo_ros" type="spawn_model" args="-param $(arg robot_namespace)/robot_description -urdf -model $(arg robot_name) -x 1
 		-J joint1 0.0
 		-J joint2 0.0
 		-J joint3 0.0"/>

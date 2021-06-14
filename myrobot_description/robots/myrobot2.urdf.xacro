@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="myrobot">
+
+	<xacro:arg name="gazebo" default="true"/>
+	
+  <xacro:include filename="$(find myrobot_description)/robots/myrobot.xacro" >
+  	<xacro:arg name="gazebo" value="${gazebo}"/>
+  </xacro:include>
+
+  <xacro:myrobot connected_to='world' arm_id='myrobot2'/>
+</robot>
