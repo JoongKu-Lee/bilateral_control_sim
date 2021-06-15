@@ -10,7 +10,7 @@ int main()
 
     Dynamics robot;
     Eigen::Matrix3d Mass = robot.Mass(asd);
-    Eigen::MatrixX3d Coriolis = robot.Coriolis(asd, asd);
+    Eigen::Matrix3d Coriolis = robot.Coriolis(asd, asd);
     Eigen::Vector3d Gravity = robot.Gravity(asd);
 
     cout<<Mass<<endl;
