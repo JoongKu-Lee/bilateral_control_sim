@@ -1,6 +1,6 @@
-#include "Dynamics.h"
+#include "DynamicsSolver.h"
 
-Eigen::Matrix3d Dynamics::Mass(const Eigen::Vector3d &q)
+Eigen::Matrix3d DynamicsSolver::Mass(const Eigen::Vector3d &q)
 {
     Eigen::Matrix3d mass;
 
@@ -17,7 +17,7 @@ Eigen::Matrix3d Dynamics::Mass(const Eigen::Vector3d &q)
     return mass;
 }
 
-Eigen::Matrix3d Dynamics::Coriolis(const Eigen::Vector3d &q, const Eigen::Vector3d &dq)
+Eigen::Matrix3d DynamicsSolver::Coriolis(const Eigen::Vector3d &q, const Eigen::Vector3d &dq)
 {
     Eigen::Matrix3d coriolis;
     
@@ -34,12 +34,14 @@ Eigen::Matrix3d Dynamics::Coriolis(const Eigen::Vector3d &q, const Eigen::Vector
     return coriolis;
 }
 
-Eigen::Vector3d Dynamics::Gravity(const Eigen::Vector3d &q)
+Eigen::Vector3d DynamicsSolver::Gravity(const Eigen::Vector3d &q)
 {
     Eigen::Vector3d gravity;
 
     gravity(0) = 0;
-    gravity(1) = - g*m3*(L3_ycom*sin(q(1) + q(2)) + L23_y*sin(q(1))) - L2_ycom*g*m2*sin(q(1));
+    gravity(1) = -g*m3*(L3_ycom*sin(q(1) + q(2)) + L23_y*sin(q(1))) - L2_ycom*g*m2*sin(q(1));
     gravity(2) = -L3_ycom*g*m3*sin(q(1) + q(2));
+
+    return gravity;
 
 }

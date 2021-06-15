@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  sensor_msgs
 )
 
 catkin_package(
@@ -29,11 +30,11 @@ include_directories(
 )
 
 add_library(${PROJECT_NAME}_lib SHARED
-        include/myrobot_control/Dynamics.cpp
+        include/myrobot_control/DynamicsSolver.cpp
 )
 
-add_executable(test_node src/test.cpp)
-target_link_libraries(test_node
+add_executable(myrobot_control_node src/myrobot_control_node.cpp)
+target_link_libraries(myrobot_control_node
   ${catkin_LIBRARIES}
   ${PROJECT_NAME}_lib
 )

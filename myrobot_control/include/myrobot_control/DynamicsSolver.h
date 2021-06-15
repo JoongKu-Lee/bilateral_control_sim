@@ -5,7 +5,7 @@
 #include <math.h>
 #include <Eigen/Dense>
 
-class Dynamics
+class DynamicsSolver
 {
 private:
     double L01_z = 0.07;
